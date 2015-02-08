@@ -113,60 +113,6 @@ namespace New_Slider
             }
         }
 
-        //GENERATATE BUTTONS (SAME X/Y DIM)
-        //public void Generate()
-        //{           
-        //    int last = (dimX * dimX) - 1;
-        //    buttons = new Button[dimX * dimX];
-        //    ogPos = new Point[last];    //1 less than 'buttons', excludes empty button
-        //    int buffer = 30 / dimX;
-        //    int padding = Convert.ToInt32((this.Height * 0.043));
-        //    int lineCount = 1;
-        //    int count = 1;
-
-        //    Point buttonPos = new Point(padding, padding);  //initial button position is just the padding on x/y
-        //    int btnDim = Convert.ToInt32(((this.Height * 0.9) / dimX) - buffer);   //button dimensions proportional to size of form, leave a 10% padding on top and bottom
-
-
-        //    for (int n = 0; n <= last; n++)
-        //    {
-        //        if (n == last)     //final button ("empty button")
-        //        {
-        //            buttons[n] = new Button();
-        //            buttons[n].Name = "empty";
-        //            buttons[n].Width = btnDim;
-        //            buttons[n].Height = btnDim;
-        //            buttons[n].Location = buttonPos;
-        //            buttons[n].Text = "empty";
-        //            buttons[n].Visible = false;
-        //        }
-        //        else
-        //        {                                       //generate all buttons
-        //            buttons[n] = new Button();
-        //            buttons[n].Name = "btn" + (n + 1);
-        //            buttons[n].Width = btnDim;
-        //            buttons[n].Height = btnDim;
-        //            buttons[n].Text = (n + 1).ToString();
-        //            buttons[n].Location = buttonPos;
-        //            buttons[n].Click += new EventHandler(this.buttons_Click);
-        //            ogPos[n] = buttonPos;
-        //        }
-
-        //        if (lineCount == dimX)      //not at end of y
-        //        {
-        //            buttonPos = new Point(padding, padding + (count * (btnDim + buffer)));
-        //            lineCount = 1;
-        //            count += 1;
-        //        }
-        //        else
-        //        {
-        //            buttonPos.X += btnDim + buffer;
-        //            lineCount += 1;
-        //        }
-        //        this.Controls.Add(buttons[n]);
-        //    }
-        //}
-
         //CHECK IF SOLVED
         public bool check()
         {
@@ -362,36 +308,6 @@ namespace New_Slider
             }
             buttons[last].Location = beforePos;  //move empty button to button clicked
         }   //LEFT
-        
-      
-
-
-
-
-
-
-
-            //Image[] images = new Image[last];
-            //Graphics g = Graphics.FromImage(img);
-            //Brush redBrush = new SolidBrush(Color.Red);
-            //Pen pen = new Pen(redBrush, 3);
-            //MessageBox.Show(img.Width + " " + img.Height);
-            //for (int i = 0; i < img.Width; i = (img.Width / 3) + i)
-            //{
-            //    for (int y = 0; y < last; y = (img.Height / 3) + y)
-            //    {
-            //        Rectangle r = new Rectangle(i, y, img.Width / dimX, img.Height / dimY);
-            //        g.DrawRectangle(pen, r);
-            //        if (i > 0 && y > 0)
-            //        {
-            //            if (i + r.Width < b.Width && y + r.Height < b.Height)
-            //            {
-                            
-            //            }
-            //        }
-            //    }
-            //}
-            //g.Dispose();
 
         private void btnScramble_Click_1(object sender, EventArgs e)    //Scramble button click
         {
